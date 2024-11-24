@@ -1,0 +1,40 @@
+body{
+    background-color:#F7ECDE ;
+}
+.heading h1{
+    position: relative;
+    font-size: 3.125rem;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    isolation: isolate;
+}
+.heading h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: .625rem;
+    background-color: #fec260;
+    transition: all 350ms;
+    z-index: -1;
+}
+.heading h1:hover::before{
+    
+    height: 50%;
+    
+}
+.bookmark{
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color:#352e28;
+   
+}
+
+ h2 {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+   -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+
+
+} 

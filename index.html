@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="heading py-2">
+            <h1>Bookmarker</h1>
+        </div>
+        <div id="formAlert" class="alert alert-danger py-1 d-none text-center">Site name must contain at least 3 characters & Site URL must be a valid one</div>
+        <div class="bookmark d-flex flex-column justify-content-center align-items-center mt-5 py-5 w-100  ">
+            <h2 >
+                <i class="fa-solid fa-bookmark"></i>
+                 Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+
+
+
+            </h2>
+            <div class="site-name w-100 d-flex flex-column justify-content-center">
+                <label for="bookmarkname" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    Site Name
+
+                </label>
+                <input oninput="validateForm(this)" type="text" placeholder="bookmark name" class="form-control" id="bookmarkname">
+                <div  class="alert alert-danger py-1 d-none">Please Enter Valid Name</div>
+
+            </div>
+            <div class="site-url w-100 d-flex flex-column justify-content-center py-4">
+                <label for="bookmarkurl" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-link"></i>
+                    SiteURL
+
+                </label>
+                <input oninput="validateForm(this)"  type="text" placeholder="bookmark url" class="form-control" id="bookmarkurl">
+                <div  class="alert alert-danger py-1 d-none">Please Enter Valid URL</div>
+
+            </div>
+            <button onclick="addBooks()" type="button" class="btn btn-danger px-5 my-2">Submit</button>
+
+
+        </div>
+        <table class="table mt-4 text-center bg-light">
+            <thead>
+                <tr>
+                    <th>index</th>
+                    <th>website name</th>
+                    <th>visit</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="table-info">
+
+            </tbody>
+
+        </table>
+
+    </div>
+    
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
